@@ -10,7 +10,7 @@ function sendMessage($mensagem, $title, $image = false, $include_player_ids = fa
     );
 
     $title = array(
-      "en" => $headings
+      "en" => $title
     );
 
     $fields = array(
