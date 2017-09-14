@@ -14,7 +14,7 @@ function sendMessage($mensagem, $title, $image = false, $include_player_ids = fa
     );
 
     $fields = array(
-      'app_id' => $app_id,
+      'app_id' => $one_signal_app_id,
       'contents' => $content,
       'headings' => $title
     );
