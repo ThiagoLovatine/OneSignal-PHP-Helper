@@ -1,23 +1,23 @@
 <?php
 
-function sendMessage($mensagem, $title, $image = false, $include_player_ids = false, $aditionalData = false, $category = false){
+function sendMessage($title, $mensagem = false, $image = false, $include_player_ids = false, $aditionalData = false, $category = false){
     
     $one_signal_api_token       = '';
     $one_signal_app_id          = '';
-    
-    $content = array(
-      "en" => $mensagem
+
+    $fields = array(
+      'app_id' => $one_signal_app_id
     );
 
-    $title = array(
+    $fields['contents'] = array(
       "en" => $title
     );
 
-    $fields = array(
-      'app_id' => $one_signal_app_id,
-      'contents' => $content,
-      'headings' => $title
-    );
+    if($mensagem){
+      $fields['headings'] = array(
+        "en" => $mensagem
+      );
+    }
   
     // @Array => players_ids / Se for falso envia para todos
     if($include_player_ids){
