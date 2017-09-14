@@ -1,6 +1,6 @@
 <?php
 
-function sendMessage($title, $mensagem = false, $image = false, $include_player_ids = false, $aditionalData = false, $category = false){
+function sendMessage($mensagem = false, $title, $image = false, $include_player_ids = false, $aditionalData = false, $category = false){
     
     $one_signal_api_token       = '';
     $one_signal_app_id          = '';
